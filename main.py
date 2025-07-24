@@ -12,7 +12,7 @@ training_data_generator = ImageDataGenerator(
         width_shift_range=0.05,
         height_shift_range=0.05)
 
-training_iterator = training_data_generator.flow_from_directory('/Users/emirhanulker/Documents/PneumoniaDetectionUsingCNN/chest_xray/test',class_mode='categorical',color_mode='grayscale',batch_size=BATCH_SIZE)
+training_iterator = training_data_generator.flow_from_directory('DIRECTORY',class_mode='categorical',color_mode='grayscale',batch_size=BATCH_SIZE)
 
 
 print("\nLoading validation data...")
@@ -24,7 +24,7 @@ validation_data_generator = ImageDataGenerator(
 
 #2) Use validation_data_generator.flow_from_directory(...) to load the validation data from the 'data/test' folder:
 
-validation_iterator = validation_data_generator.flow_from_directory('/Users/emirhanulker/Documents/PneumoniaDetectionUsingCNN/chest_xray/test',class_mode='categorical', color_mode='grayscale',batch_size=BATCH_SIZE)
+validation_iterator = validation_data_generator.flow_from_directory('DIRECTORY',class_mode='categorical', color_mode='grayscale',batch_size=BATCH_SIZE)
 
 print("\nBuilding model...")
 
